@@ -1,3 +1,8 @@
 terraform {
-  backend "s3" {}
+  backend "s3" {
+    bucket = "bucketinfo23"
+    key    = "d78/prod/state"
+    region = "us-east-1"
+    dynamodb_table = "remote-state-terr"
+  }
 }
